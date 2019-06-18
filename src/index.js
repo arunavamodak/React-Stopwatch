@@ -1,19 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Stopwatch from "../src/Components/Stopwatch";
+import App from "./App";
+import Stopwatch from "./Components/Stopwatch";
 import * as serviceWorker from "./serviceWorker";
 
-import { Provider } from "react-redux";
-import { myStore } from "../src/Store/ReduxStore";
-
-const store = myStore();
-ReactDOM.render(
-  <Provider store={store}>
-    <Stopwatch />
-  </Provider>,
-  document.getElementById("root")
-);
+ReactDOM.render(<Stopwatch />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
